@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Form</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>APPLICATION FORM</h1>
+    </header>
+    <main>
+        <div class="note">
+            <strong>NOTE:</strong> Form is to be completed 21 days prior
+        </div>
+        <form id="applicationForm">
+            <h2>Personal Details</h2>
+
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="iq">IQ:</label>
+            <input type="number" id="iq" name="iq" required>
+
+            <label>Date of Proposed Outing:</label>
+            <input type="date" id="outingDate" name="outingDate" required>
+
+            <label>Gender:</label>
+            <label for="male">
+                <input type="radio" id="male" name="gender" value="male" required> Male
+            </label>
+            <label for="female">
+                <input type="radio" id="female" name="gender" value="female" required> Female
+            </label>
+            <label for="other">
+                <input type="radio" id="other" name="gender" value="other"> Other
+            </label>
+
+            <h2>Check All That Apply</h2>
+            <label for="tattoos">
+                <input type="checkbox" id="tattoos" name="options" value="tattoos"> I have tattoos/piercings
+            </label>
+            <label for="olderThanDaughter">
+                <input type="checkbox" id="olderThanDaughter" name="options" value="olderThanDaughter"> I am more than 2 years older than my daughter
+            </label>
+            <label for="panelVan">
+                <input type="checkbox" id="panelVan" name="options" value="panelVan"> I own a panel van or V8 ute
+            </label>
+            <label for="fullTime">
+                <input type="checkbox" id="fullTime" name="options" value="fullTime"> I work full time
+            </label>
+            <label for="richParents">
+                <input type="checkbox" id="richParents" name="options" value="richParents"> My parents are rich
+            </label>
+            <label for="wellLitLocation">
+                <input type="checkbox" id="wellLitLocation" name="options" value="wellLitLocation"> Is the date at a well-lit location?
+            </label>
+
+            <h2>Political Persuasion</h2>
+            <label for="politicalAffiliation">Political Affiliation:</label>
+            <select id="politicalAffiliation" name="politicalAffiliation">
+                <option value="leftWing">Left Wing</option>
+                <option value="rightWing">Right Wing</option>
+                <option value="nazi">Nazi</option>
+                <option value="conservative">Conservative</option>
+            </select>
+
+            <label for="educationLevel">Education Level Completed:</label>
+            <select id="educationLevel" name="educationLevel">
+                <option value="university">University</option>
+                <option value="college">College</option>
+                <option value="highSchool">High School</option>
+                <option value="none">None</option>
+            </select>
+
+            <h2>Essay Section</h2>
+            <label for="essay">In 50 words, explain why you want to date my daughter:</label>
+            <textarea id="essay" name="essay" rows="4" required></textarea>
+
+            <label>Please upload contact details for 2 references:</label>
+            <textarea id="references" name="references" rows="4" required></textarea>
+
+            <button type="submit">Submit Application</button>
+        </form>
+    </main>
+    <footer>
+        <p>&copy; 2024 Your Company Name</p>
+    </footer>
+    <script>
+        document.getElementById('applicationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Application submitted!');
+        });
+    </script>
+</body>
+</html>
